@@ -103,10 +103,20 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   bat
+  fastfetch
+  fd
+  fish
+  fzf
   git
+  lua
   neovim
   ripgrep
   rpi-imager
+  steam
+  tealdeer
+  tig
+  uv
+  yt-dlp
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
