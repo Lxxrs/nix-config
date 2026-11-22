@@ -31,13 +31,13 @@
 
   boot.initrd.luks.devices."luks-15ad8942-f58c-4c6c-9fed-5a605e4bcde8".device = "/dev/disk/by-uuid/15ad8942-f58c-4c6c-9fed-5a605e4bcde8";
 
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/9EFD-B1E0";
-      fsType = "vfat";
-      options = [ "fmask=0077" "dmask=0077" ];
-    };
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/9EFD-B1E0";
+    fsType = "vfat";
+    options = ["fmask=0077" "dmask=0077"];
+  };
 
-  swapDevices = [ ];
+  swapDevices = [];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

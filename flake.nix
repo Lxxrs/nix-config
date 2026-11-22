@@ -11,13 +11,10 @@
     self,
     nix-darwin,
     nixpkgs,
-  }:
-  let
-
+  }: let
     username = "lars";
 
-    configuration = { pkgs, ... }: {
-      
+    configuration = {pkgs, ...}: {
       nixpkgs.config.allowUnfree = true;
 
       # List packages installed in system profile. To search by name, run:
@@ -136,7 +133,7 @@
       programs.fish.enable = true;
 
       # Add Nix's fish to /etc/shells so chsh accepts it.
-      environment.shells = [ pkgs.fish ];
+      environment.shells = [pkgs.fish];
 
       system = {
         # Set Git commit hash for darwin-version.
@@ -152,9 +149,10 @@
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
     };
-  in
-  {
-    # Build darwin flake using:
+  in {
+    formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.alejandra;
+
+    # MacBook - Build darwin flake using:
     # $ darwin-rebuild build --flake ~/nix-config#m3-air
     darwinConfigurations."m3-air" = nix-darwin.lib.darwinSystem {
       modules = [
@@ -162,7 +160,7 @@
       ];
     };
 
-    # ThinkPad - Build nixOS flake using: 
+    # ThinkPad - Build nixOS flake using:
     # sudo nixos-rebuild switch --flake ~/nix-config#t480
     nixosConfigurations."t480" = nixpkgs.lib.nixosSystem {
       modules = [
