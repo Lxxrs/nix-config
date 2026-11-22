@@ -65,19 +65,64 @@
           #extraFlags = ["--force-cleanup"];
         };
 
-        #brews = [
-        #];
+        enableFishIntegration = true;
+
+        # Formulae to install
+        brews = [
+          "astro"
+          "anomalyco/tap/opencode-v2"
+          "container"
+          "go"
+          "k9s"
+          "kubernetes-cli"
+          "lazygit"
+          "lua"
+          "lua-language-server"
+          "luarocks"
+          "minikube"
+          "mole"
+          "mtr"
+          "nmap"
+          "opentofu"
+          "pnpm"
+          "starship"
+          "typst"
+          "wget"
+        ];
 
         casks = [
+          "actual"
           "balenaetcher"
-          "discord"
+          "bitwarden"
+          "claude"
+          "ente-auth"
+          "firefox"
+          "focusrite-control-2"
+          "helium-browser"
+          "localsend"
+          "mullvad-browser"
+          "mullvad-vpn"
+          "obsidian"
+          "orbstack"
+          "raspberry-pi-imager"
+          "tor-browser"
+          "vivaldi"
+          "vscodium"
+          "zen"
         ];
-	
-	#taps = [
-	#];
 
-        #masApps = {
-        #};
+        #taps = [
+        #];
+
+        masApps = {
+          "Home Assistant" = 1099568401;
+          "Keynote: Design Presentations" = 361285480;
+          #"Manet Music" = 6470928235;
+          "Numbers: Make Spreadsheets" = 361304891;
+          "Pages: Create Documents" = 361309726;
+          "uBlock Origin Lite" = 6745342698;
+          "WireGuard" = 1451685025;
+        };
       };
 
       fonts.packages = [
