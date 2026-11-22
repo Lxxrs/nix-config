@@ -58,8 +58,8 @@
         enable = true;
 
         onActivation = {
-          autoUpdate = false; #true;
-          upgrade = false; #true;
+          autoUpdate = true;
+          upgrade = true;
           cleanup = "none"; #"uninstall";
           # Homebrew Bundle now requires explicit confirmation for --cleanup.
           #extraFlags = ["--force-cleanup"];
