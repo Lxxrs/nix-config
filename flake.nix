@@ -22,13 +22,36 @@
 
       # List packages installed in system profile. To search by name, run:
       # $ nix search nixpkgs wget
-      environment.systemPackages =
-        [
-	  pkgs.bat
-	  pkgs.ghostty-bin
-	  pkgs.neovim
-	  pkgs.tig
-        ];
+      environment.systemPackages = [
+        pkgs.alejandra
+        pkgs.anki-bin
+        pkgs.asciiquarium
+        pkgs.ast-grep
+        pkgs.bat
+        pkgs.cargo
+        pkgs.claude-code
+        pkgs.deadnix
+        pkgs.discord
+        pkgs.element-desktop
+        pkgs.fastfetch
+        pkgs.fd
+        pkgs.fzf
+        pkgs.ghostty-bin # macOS
+        pkgs.git
+        pkgs.git-cliff
+        pkgs.git-filter-repo
+        pkgs.kubectx
+        pkgs.neovim
+        pkgs.nixd
+        pkgs.nixfmt
+        pkgs.ripgrep
+        pkgs.signal-desktop
+        pkgs.statix
+        pkgs.thunderbird
+        pkgs.tig
+        pkgs.uv
+        pkgs.yt-dlp
+      ];
 
       # if a package isn't available through nix, use homebrew
       homebrew = {
