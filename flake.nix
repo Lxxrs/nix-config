@@ -130,9 +130,11 @@
           };
         };
 
-      fonts.packages = [
-        pkgs.nerd-fonts.jetbrains-mono
-      ];
+        # Automatic cleanup using garbage collection
+        nix.gc.automatic = true;
+        nix.gc.options = "--delete-older-than 10d";
+	nix.optimise.automatic = true;   # macOS
+        #nix.settings.auto-optimise-store = true; # Linux
 
         # Necessary for using flakes on this system.
         nix.settings.experimental-features = "nix-command flakes";
