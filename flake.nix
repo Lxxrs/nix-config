@@ -23,7 +23,22 @@
         # List packages installed in system profile. To search by name, run:
         # $ nix search nixpkgs wget
         environment.systemPackages = [
-          #pkgs.alsa-scarlett-gui # Linux only
+
+          # only macOS
+          pkgs.ghostty-bin
+
+          # only Linux
+          #pkgs.actual-client
+          #pkgs.alsa-scarlett-gui
+          #pkgs.containerlab
+          #pkgs.ente-auth
+          #pkgs.ghostty
+          #pkgs.lazygit
+          #pkgs.mullvad-vpn
+          #pkgs.nerdctl
+          #pkgs.rpi-imager
+
+          # all
           pkgs.anki-bin
           pkgs.asciiquarium
           pkgs.ast-grep
@@ -31,31 +46,51 @@
           pkgs.btop
           pkgs.cargo
           pkgs.claude-code
+          pkgs.curl
+          pkgs.colima
           pkgs.deadnix
           pkgs.discord
+          pkgs.docker
+          pkgs.docker-buildx
+          pkgs.docker-compose
           pkgs.element-desktop
           pkgs.fastfetch
+          pkgs.fish
+          pkgs.fish-lsp
           pkgs.fd
           pkgs.fzf
-          pkgs.ghostty-bin # macOS
           pkgs.git
           pkgs.git-cliff
           pkgs.git-filter-repo
+          pkgs.go
+          pkgs.jq
+          pkgs.jujutsu
+          pkgs.kind
           pkgs.kubectx
           pkgs.k9s
           pkgs.localsend
+          pkgs.minikube
+          pkgs.mtr
           pkgs.neovim
           pkgs.nixd
           pkgs.nixfmt-tree
+          pkgs.nmap
+          pkgs.obsidian
           pkgs.opentofu
+          pkgs.pnpm
           pkgs.ripgrep
           pkgs.signal-desktop
+          pkgs.starship
           pkgs.statix
           pkgs.thunderbird
           pkgs.tig
+          pkgs.tshark
+          pkgs.typst
           pkgs.uv
+          pkgs.vscodium
           pkgs.wget
           pkgs.yt-dlp
+          pkgs.zig
         ];
 
         fonts.packages = [
@@ -79,21 +114,15 @@
           # Formulae to install
           brews = [
             "astro"
-            "anomalyco/tap/opencode-v2"
             "container"
-            "go"
+            "incus"
             "kubernetes-cli"
             "lazygit"
             "lua"
             "lua-language-server"
             "luarocks"
-            "minikube"
             "mole"
-            "mtr"
-            "nmap"
-            "pnpm"
-            "starship"
-            "typst"
+            "anomalyco/tap/opencode-v2"
           ];
 
           casks = [
@@ -107,12 +136,11 @@
             "helium-browser"
             "mullvad-browser"
             "mullvad-vpn"
-            "obsidian"
+            "opencode-desktop"
             "orbstack"
             "raspberry-pi-imager"
             "tor-browser"
             "vivaldi"
-            "vscodium"
             "zen"
           ];
 
