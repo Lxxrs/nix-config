@@ -37,6 +37,7 @@
           #pkgs.mullvad-vpn
           #pkgs.nerdctl
           #pkgs.rpi-imager
+          #pkgs.vivaldi
 
           # all
           pkgs.anki-bin
@@ -78,10 +79,11 @@
           pkgs.obsidian
           pkgs.opentofu
           pkgs.pnpm
-          pkgs.ripgrep
+          #pkgs.ripgrep
           pkgs.signal-desktop
           pkgs.starship
           pkgs.statix
+          pkgs.go-task
           pkgs.thunderbird
           pkgs.tig
           pkgs.tshark
@@ -89,6 +91,7 @@
           pkgs.uv
           pkgs.vscodium
           pkgs.wget
+          pkgs.yq
           pkgs.yt-dlp
           pkgs.zig
         ];
@@ -123,6 +126,7 @@
             "luarocks"
             "mole"
             "anomalyco/tap/opencode-v2"
+            "ripgrep"
           ];
 
           casks = [
